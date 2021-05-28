@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+  padding-left: 15px;
+  font-family: "Calibri";
+  font-weight: 400;
+  font-size: large;
+  cursor: pointer;
+  user-select: none;
+}
+li {
+  padding: 5px 5px 2px 5px;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+}
+.caret::before {
+  content: "\25B8";
+  color: #007bff;
+}
+.collapsed {
+  background-color: #007bff;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  box-shadow: 2px gray;
+}
+.expanded {
+  background-color: white;
+  color: black;
+  padding: 5px 10px 5px 10px;
+
+}
+.caret-down::before {
+  content: "\25BE";
+  color: gray;
+}

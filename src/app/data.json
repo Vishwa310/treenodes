@@ -1,0 +1,65 @@
+{
+  "name": "countries",
+  "values": [
+    {
+      "name": "india",
+      "values": [
+        {
+          "name": "south",
+          "values": [
+            {
+              "name": "tamil nadu",
+              "value": [
+                {
+                  "name": "population",
+                  "value": "67000000"
+                }
+              ]
+            },
+            {
+              "name": "kerala",
+              "value": [
+                {
+                  "name": "population",
+                  "value": "34000000"
+                }
+              ]
+            },
+            {
+              "name": "Andhra",
+              "value": [
+                {
+                  "name": "population",
+                  "value": "1600000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "north",
+          "values": [
+            {
+              "name": "punjab",
+              "value": [
+                {
+                  "name": "population",
+                  "value": "28000000"
+                }
+              ]
+            },
+            {
+              "name": "J&K",
+              "value": [
+                {
+                  "name": "population",
+                  "value": "1000000"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

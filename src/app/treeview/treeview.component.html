@@ -1,0 +1,25 @@
+<ul>
+    <ng-template #treeView let-items>
+        <li *ngFor="let item of items">
+            <span class="caret" (click)="toggle($event, item.name)"
+                [ngClass]="{'caret-down': expanded.has(item.name)}"></span>
+            <span [id]="item.name" (click)="toggle($event, item.name)" [ngClass]="{'expanded': expanded.has(item.name), 'collapsed': !expanded.has(item.name)}">
+                {{ item.name | titlecase}}
+            </span>
+            <ng-container *ngIf="expanded.has(item.name)">
+                <ul *ngIf="item.values?.length > 0">
+                    <ng-container *ngTemplateOutlet="treeView;  context:{ $implicit: item.values }"></ng-container>
+                </ul>
+                <ul *ngIf="item.value?.length > 0">
+                    <li *ngFor="let det of item.value" style="margin-left: 15px;" id="details">
+                        {{det.name | titlecase}}: {{det.value | indian}}
+                    </li>
+
+                </ul>
+            </ng-container>
+        </li>
+    </ng-template>
+    <ng-container *ngTemplateOutlet="treeView; context:{ $implicit: items }"></ng-container>
+</ul>
+<button id="expall" class="btn btn-primary  m-3" (click)="expandAll()"> Expand All </button>
+<button id="collapall" class="btn btn-primary  m-3" (click)="collapseAll()"> Collapse All </button>
